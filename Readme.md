@@ -2,7 +2,7 @@
 
 * Студент: [Слава Кочнев](https://up.htmlacademy.ru/htmlcss-individual/2/user/2114051).
 * Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
-* Сайт:[Мой проект Седона] (https://slkochnev.github.io/2114051-sedona-2/).
+
 
 ---
 
