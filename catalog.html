@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <title>HTML Academy: Седона</title>
+        <link rel="stylesheet" href="styles/styles.css" />
     </head>
     <body>
         <header class="prime-header">
             <nav class="header-navigation">
-               <a href="index.html" class="header-navigation-logo-link"><img class="header-navigation-logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона" /></a>
+                <a href="index.html" class="header-navigation-logo-link"><img class="header-navigation-logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона" /></a>
                 <ul class="header-navigation-list">
                     <li class="header-navigation-item"><a href="index.html" class="header-navigation-link">Главная</a></li>
                     <li class="header-navigation-item"><a href="#" class="header-navigation-link">О седоне</a></li>
@@ -32,7 +33,7 @@
                 <ul class="breadcrumbs">
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link" href="index.html">
-                            <img src="#" alt="главная страница" />
+                            <p class="visually-hidden">Главная страница.</p>
                         </a>
                     </li>
                     <li class="breadcrumbs-item">
@@ -98,11 +99,11 @@
                             <input type="number" name="minPrice" min="0" id="priceMin" />
                             <label for="priceMax">до</label>
                             <input type="number" name="maxPrice" max="10000" id="priceMax" />
-                            <button class="price-group-button" type="submit">Применить</button>
+                            <input type="range" name="rangePrice" min="0" max="10000" />
 
-                            <div class="price-group-range">
-                                <input type="range" name="rangePrice" min="0" max="10000" />
-                                <button class="price-group-button-reset" type="reset">Сбросить</button>
+                            <div class="price-group-button">
+                                <button class="price-group-button button" type="submit">Применить</button>
+                                <button class="price-group-button-reset button" type="reset">Сбросить</button>
                             </div>
                         </fieldset>
                     </div>
@@ -139,12 +140,12 @@
                             <p class="product-card-description-article">От 4000 ₽</p>
                         </div>
                         <div class="product-card-snap">
-                            <a href="#" class="product-card-button button">подробнее</a>
+                            <a href="#" class="product-card-button-detail button">подробнее</a>
                             <a href="#" class="product-card-button button">в избранное</a>
                         </div>
                         <div class="product-card-rating">
                             <div class="rating-star">
-                                <span class="visually-hidden">Отценка 4 звезды</span>
+                                <span class="visually-hidden">Четыре звезды</span>
                             </div>
                             <div class="rating-number">
                                 <p class="rating-number-title">Рейтинг: 8,5</p>
@@ -162,12 +163,12 @@
                             <p class="product-card-description-article">От 5000 ₽</p>
                         </div>
                         <div class="product-card-snap">
-                            <a href="#" class="product-card-button button">подробнее</a>
+                            <a href="#" class="product-card-button-detail button">подробнее</a>
                             <a href="#" class="product-card-button button">в избранное</a>
                         </div>
                         <div class="product-card-rating">
                             <div class="rating-star">
-                                <span class="visually-hidden">Отценка 4 звезды</span>
+                                <span class="visually-hidden">Четыре звезды</span>
                             </div>
                             <div class="rating-number">
                                 <p class="rating-number-title">Рейтинг: 9,2</p>
@@ -185,12 +186,12 @@
                             <p class="product-card-description-article">От 2500 ₽</p>
                         </div>
                         <div class="product-card-snap">
-                            <a href="#" class="product-card-button button">подробнее</a>
+                            <a href="#" class="product-card-button-detail button">подробнее</a>
                             <a href="#" class="product-card-button button">в избранное</a>
                         </div>
                         <div class="product-card-rating">
                             <div class="rating-star">
-                                <span class="visually-hidden">Отценка 3 звезды</span>
+                                <span class="visually-hidden">Три звезды</span>
                             </div>
                             <div class="rating-number">
                                 <p class="rating-number-title">Рейтинг: 6,9</p>
@@ -208,12 +209,12 @@
                             <p class="product-card-description-article">От 1500 ₽</p>
                         </div>
                         <div class="product-card-snap">
-                            <a href="#" class="product-card-button button">подробнее</a>
+                            <a href="#" class="product-card-button-detail button">подробнее</a>
                             <a href="#" class="product-card-button button">в избранное</a>
                         </div>
                         <div class="product-card-rating">
                             <div class="rating-star">
-                                <span class="visually-hidden">Отценка 2 звезды</span>
+                                <span class="visually-hidden">Две звезды</span>
                             </div>
                             <div class="rating-number">
                                 <p class="rating-number-title">Рейтинг: 5,0</p>
@@ -224,7 +225,7 @@
 
                 <ul class="pagination">
                     <li class="pagination-item">
-                        <a class="pagination-link">1</a>
+                        <a class="pagination-link pagination-link-black">1</a>
                     </li>
                     <li class="pagination-item">
                         <a class="pagination-link" href="#">2</a>
@@ -236,7 +237,7 @@
                         <a class="pagination-link" href="#">4</a>
                     </li>
                     <li class="pagination-item">
-                        <a class="pagination-link pagination-link-all" href="#">...</a>
+                        <span class="pagination-link pagination-link-all pagination-link-black">...</span>
                     </li>
                     <li class="pagination-item">
                         <a class="pagination-link" href="#">10</a>
@@ -244,9 +245,12 @@
                 </ul>
             </section>
 
-            <section class="subscription escription">
-                <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-                <p class="subscription-paragraph">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <section class="subscription description">
+                <h2 class="subscription-title description-title">Подпишитесь на рассылку</h2>
+                <p class="subscription-paragraph description-paragraph">
+                    Только полезная информация и никакого спама,<br />
+                    честное бойскаутское!
+                </p>
                 <form class="newsletter" method="post" action="https://echo.htmlacademy.ru/">
                     <label for="newsletter-email">Email</label>
                     <input class="newsletter-field" type="text" placeholder="Ваш e-mail" name="newsletter-email" id="newsletter-email" required />
@@ -256,25 +260,25 @@
         </main>
 
         <footer class="footer">
-            <section class="footer-social">
+            <div class="footer-social">
                 <ul class="footer-social-list">
                     <li class="footer-social-item">
                         <a href="" class="footer-social-link">
-                            <img class="footer-social-logo" src="#" alt="вконтакте" />
+                            <p class="visually-hidden">Вконтакте.</p>
                         </a>
                     </li>
                     <li class="footer-social-item">
                         <a href="" class="footer-social-link">
-                            <img class="footer-social-logo" src="#" alt="телеграм" />
+                            <p class="visually-hidden">Телеграм.</p>
                         </a>
                     </li>
                     <li class="footer-social-item">
                         <a href="" class="footer-social-link">
-                            <img class="footer-social-logo" src="#" alt="ютюб" />
+                            <p class="visually-hidden">Ютюб.</p>
                         </a>
                     </li>
                 </ul>
-            </section>
+            </div>
 
             <address class="footer-contacts">
                 <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>

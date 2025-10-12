@@ -3,11 +3,12 @@
     <head>
         <meta charset="utf-8" />
         <title>HTML Academy: Седона</title>
+        <link rel="stylesheet" href="styles/styles.css" />
     </head>
     <body>
         <header class="prime-header">
             <nav class="header-navigation">
-                <a href="index.html" class="header-navigation-logo-link"><img class="header-navigation-logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона" /></a>
+                <a href="index.html" class="header-navigation-logo-link"><img class="header-navigation-logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона." /></a>
                 <ul class="header-navigation-list">
                     <li class="header-navigation-item"><a href="#" class="header-navigation-link">Главная</a></li>
                     <li class="header-navigation-item"><a href="#" class="header-navigation-link">О седоне</a></li>
@@ -29,24 +30,26 @@
         <main class="main-index">
             <section class="welcome-page">
                 <h1 class="visually-hidden">СЕДОНА</h1>
-                <img src="images/welcome.svg" alt="Логотип 'Седона'" class="welcome-page-logo" width="458" height="352"/>
+                <img src="images/welcome.svg" alt="Логотип 'Седона'." class="welcome-page-logo" width="458" height="352" />
+                <img src="images/divider.png" alt="Логотип 'Седона'." width="100%" height="57" />
             </section>
 
             <section class="advantages">
                 <div class="description">
-                    <h2 class="description-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+                    <h2 class="description-title">
+                        Седона — небольшой городок в Аризоне, <br />
+                        заслуживающий большего!
+                    </h2>
                     <p class="description-paragraph">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
                 </div>
 
                 <h2 class="visually-hidden">Преимущества</h2>
                 <div class="advantages">
-                    <ul class="advantages-list list-card">
+                    <ul class="advantages-list">
                         <li class="advantages-item item-card blue-card">
                             <h3 class="advantages-title title-card">Настоящий городок</h3>
                             <p class="advantages-description description-card">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-                        </li>
-                        <li class="advantages-item item-card">
-                            <img src="images/residential building.jpg" width="800" height="385" alt="жилой дом в городе седоне" class="advantages-logo" />
+                            <img src="images/residential_building.jpg" width="800" height="385" alt="Жилой дом в городе седоне." class="advantages-logo" />
                         </li>
 
                         <li class="advantages-item item-card blue-gray-card">
@@ -61,10 +64,9 @@
                             <h3 class="advantages-title title-card">Мало туристов</h3>
                             <p class="advantages-description description-card">Большинство едет в Гранд Каньон и толпится там</p>
                         </li>
-                        <li class="advantages-item item-card">
-                            <img src="images/devil's Bridge.jpg" width="800" height="385" alt="достопримечательность седоны 'мост дьявола'" class="advantages-logo" />
-                        </li>
+
                         <li class="advantages-item item-card blue-card">
+                            <img src="images/devils_bridge.jpg" width="800" height="385" alt="Достопримечательность седоны 'мост дьявола'." class="advantages-logo" />
                             <h3 class="advantages-title title-card">Там есть мост дьявола</h3>
                             <p class="advantages-description description-card">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
                         </li>
@@ -74,7 +76,10 @@
 
             <section class="advice">
                 <div class="description">
-                    <h2 class="description-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+                    <h2 class="description-title">
+                        Приезжайте в Седону отдохнуть<br />
+                        в комфорте и уюте!
+                    </h2>
                     <p class="description-paragraph">Опытный персонал и качественное обслуживание!</p>
                 </div>
 
@@ -96,14 +101,20 @@
 
                 <div class="description">
                     <h2 class="description-title">Заинтересовались?</h2>
-                    <p class="description-paragraph">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+                    <p class="description-paragraph">
+                        Укажите предполагаемые даты поездки, <br />
+                        и мы покажем вам лучшие предложения гостиниц в Седоне
+                    </p>
                     <a href="#" class="button description-button-all">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
                 </div>
             </section>
 
-            <section class="subscription escription">
-                <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-                <p class="subscription-paragraph">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <section class="subscription description">
+                <h2 class="subscription-title description-title">Подпишитесь на рассылку</h2>
+                <p class="subscription-paragraph description-paragraph">
+                    Только полезная информация и никакого спама,<br />
+                    честное бойскаутское!
+                </p>
                 <form class="newsletter" method="post" action="https://echo.htmlacademy.ru/">
                     <label for="newsletter-email">Email</label>
                     <input class="newsletter-field" type="text" placeholder="Ваш e-mail" name="newsletter-email" id="newsletter-email" required />
@@ -116,13 +127,19 @@
             <section class="footer-social">
                 <ul class="footer-social-list">
                     <li class="footer-social-item">
-                        <a href="" class="footer-social-link"> </a>
+                        <a href="" class="footer-social-link">
+                            <p class="visually-hidden">Вконтакте.</p>
+                        </a>
                     </li>
                     <li class="footer-social-item">
-                        <a href="" class="footer-social-link"> </a>
+                        <a href="" class="footer-social-link">
+                            <p class="visually-hidden">Телеграм.</p>
+                        </a>
                     </li>
                     <li class="footer-social-item">
-                        <a href="" class="footer-social-link"> </a>
+                        <a href="" class="footer-social-link">
+                            <p class="visually-hidden">Ютюб.</p>
+                        </a>
                     </li>
                 </ul>
             </section>
@@ -132,7 +149,7 @@
             </address>
 
             <a class="about-text" href="https://htmlacademy.ru/">
-                <img class="about-text-logo" src="images/logo_htmlacademy.svg" width="115" height="33" alt="логотип html-academy" />
+                <img class="about-text-logo" src="images/logo_htmlacademy.svg" width="115" height="33" alt="Логотип html-academy." />
             </a>
         </footer>
     </body>
