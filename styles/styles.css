@@ -14,22 +14,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: "PT Sans";
-    font-style: italic;
-    font-weight: 400;
-    src: url("../fonts/ptsans-400.woff2") format("woff2");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "PT Sans";
-    font-style: italic;
-    font-weight: 700;
-    src: url("../fonts/ptsans-700.woff2") format("woff2");
-    font-display: swap;
-}
-
 body {
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
@@ -39,15 +23,13 @@ body {
     padding: 0 40px 0 40px;
 }
 
-ul {
+.marker-delete {
     list-style-type: none;
 }
 
-a {
+.underline-deleted {
     text-decoration: none;
 }
-
-/* БЕЛЫЙ ЦВЕТ ПОКА ЧТО НЕ ВИДНО НА САЙТЕ */
 
 .button {
     font-family: "PT Sans", sans-serif;
@@ -55,6 +37,8 @@ a {
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
+    background-color: #000000;
+    text-transform: uppercase;
 }
 
 .prime-header {
@@ -74,39 +58,17 @@ a {
 
 .header-navigation-link {
     color: #000000;
-    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     text-align: center;
 }
 
 .welcome-page {
-    color: #333333;
-    background-color: white;
-    background-image: url(../images/index-background.jpg);
+    color: #000000;
+    background-color: #85b7d2;
+    background-image: url("../images/index_background.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% auto;
-}
-
-.description {
-    text-align: center;
-}
-
-.description-title {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.description-paragraph {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    color: #333333;
+    background-size: cover;
 }
 
 .item-card {
@@ -127,7 +89,6 @@ a {
 }
 
 .title-card {
-    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 26px;
@@ -136,31 +97,55 @@ a {
 }
 
 .description-card {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    color: #333333;
+    color: #000000;
 }
 
-.subscription {
+.color-white {
+    color: white;
+}
+
+.description-button-all {
+    width: 376px;
+    height: 52px;
+    display: inline-block;
+}
+
+.newsletter-button {
+    width: 232px;
+    height: 52px;
+}
+
+.description {
+    text-align: center;
+}
+
+.description-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.description-paragraph {
+    font-size: 22px;
+    line-height: 26px;
+    color: white;
+}
+
+.description-image {
     color: #333333;
-    background-color: white;
-    background-image: url(../images/subscribe.jpg);
+    background-color: #967768;
+    background-image: url("../images/subscribe.jpg");
     background-repeat: no-repeat;
 
-    background-size: 100% auto;
+    background-size: cover;
     min-height: 415px;
 }
 
-.subscription-title,
-.subscription-paragraph {
-    color: #ffffff;
-}
-
 .footer-contacts-phone {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
     font-size: 40px;
     line-height: 40px;
     color: #000000;
@@ -169,24 +154,28 @@ a {
 /* СТИЛИ ДЛЯ КАТАЛОГА */
 
 .inner-header {
-    color: #333333;
-    background-color: white;
-    background-image: url(../images/catalog_backgraund.jpg);
+    color: #000000;
+    background-color: #b0c5d6;
+    background-image: url("../images/catalog_backgraund.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
 }
 
 .inner-header-title {
-    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 60px;
     line-height: 78px;
     color: #ffffff;
 }
 
+.breadcrumbs-link {
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
 .filter-group-title,
 .price-group-title {
-    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
@@ -194,15 +183,12 @@ a {
 }
 
 .filter-group-item {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
     font-size: 18px;
     line-height: 23px;
     color: #ffffff;
 }
 
 .catalog-navigation-title {
-    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
@@ -212,32 +198,50 @@ a {
 
 .catalog-navigation-select,
 .product-card-description-article {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    color: #333333;
+    color: #000000;
 }
 
 .product-card-title {
-    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     color: #000000;
 }
 
-/* БЕЛЫЙ ЦВЕТ ПОКА ЧТО НЕ ВИДНО НА САЙТЕ */
-
 .pagination-link {
-    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 36px;
     color: #ffffff;
     text-transform: uppercase;
+    background-color: #000000;
 }
 
 .pagination-link-black {
     color: #000000;
+}
+
+.color-price {
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    opacity: 0.3;
+}
+
+.rating-number-title {
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.subscription-title,
+.subscription-paragraph {
+    color: #000000;
+}
+
+.subscription-image {
+    background-color: #ffffff;
 }
