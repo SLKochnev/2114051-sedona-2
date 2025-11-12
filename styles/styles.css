@@ -23,9 +23,16 @@ body {
     background-color: #fff;
     color: #000;
     font-size: 18px;
-    max-width: 1200px;
+    width: 1200px;
+    min-width: 1200px;
     margin: auto;
-    box-shadow: 0 0 15px 0 #00000033;
+
+}
+
+.prime-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px 0 #00000033;
 }
 
 .visually-hidden {
@@ -57,18 +64,6 @@ body {
 
 .button:hover {
     cursor: pointer;
-}
-
-.main-container {
-    flex-grow: 1;
-}
-
-.marker-delete {
-    list-style-type: none;
-}
-
-.underline-deleted {
-    text-decoration: none;
 }
 
 .prime-header {
@@ -162,9 +157,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
-    margin-left: 30px;
+    margin-left: 46px;
     max-width: 600px;
-    padding-left: 16px;
 }
 
 .header-links .header-navigation-link {
@@ -224,223 +218,266 @@ body {
     padding: 8px 34px 8px 34px;
 }
 
-.button:hover {
-    cursor: pointer;
-}
-
-.navigation-icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-}
-
-.navigation-icon-number {
-    right: auto;
-    left: 10px;
-
-    top: auto;
-    bottom: 20px;
-    margin: auto 0;
-}
-
-.main-index {
-    z-index: 0;
-    width: 1200px;
-    margin: 0 auto;
-}
-
 .welcome-page {
-    color: #000000;
-    background-color: #85b7d2;
     background-image: url("../images/index_background.jpg");
-    background-repeat: no-repeat;
+    background-color: #bfe5fa;
     background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 51px 371px 82px 371px;
     background-size: cover;
-    height: 485px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.welcome-page-logo {
-    padding-top: 50px;
-    display: block;
-    margin: 0 auto;
-}
-
-.welcome-page-logo-decor {
+.welcome-page:after {
+    content: "";
     position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
     bottom: 0;
-    left: 0;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url("../images/divider.png");
 }
 
-.advantages-list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.item-card {
-    width: 400px;
-    height: 385px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-
-.description-main-index {
-    padding-top: 45px;
-    padding-bottom: 67px;
-}
-
-.advice-description {
-    margin-bottom: 64px;
-}
-
-.advice-description-title {
-    margin: 64px 0 0 0;
-}
-
-.advantages-logo-decor-white {
-    background-color: #ffffff4d;
-}
-
-.advantages-logo-decor-gray {
-    background-color: #0000004d;
-}
-
-.advantages-logo-card {
-    width: 76px;
-    height: 76px;
-}
-
-.advantages-logo-building {
-    background-image: url("../images/residential_building.jpg");
-    width: 800px;
-    height: 385px;
-}
-
-.advantages-logo-bridge {
-    background-image: url("../images/devils_bridge.jpg");
-    width: 800px;
-    height: 385px;
-}
-
-.advantages-text {
-    width: 230px;
-    margin: 0 auto;
+.description {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 9px;
+    align-items: center;
+    gap: 25px;
+    padding-top: 69px;
+    padding-bottom: 69px;
 }
 
-.advice-list {
-    margin-top: 62px;
-    padding: 0;
+.description-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    margin: 0;
+}
+
+.description-paragraph {
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    margin: 0;
+}
+
+.advantages-list {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-top: 21px;
 }
 
-.advantages-logo-decor {
-    width: 60px;
-    height: 2px;
-    margin: auto;
+.true-city > .advantages-content,
+.bridge > .advantages-content {
+    padding-top: 102px;
 }
 
-.advantages-title {
-    margin-top: 16px;
+.advantages-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 400px;
+    min-height: 385px;
+    box-sizing: border-box;
+    padding: 113px 85px 100px;
 }
 
-.blue-card {
-    background-color: #82b3d3;
-}
-
-.blue-gray-card {
+.advantages-item {
+    display: flex;
     background-color: #83b3d31f;
+    list-style-type: none;
 }
-
-.gray-card {
+.advantages-item img {
+    object-fit: cover;
+    height: 100%;
+}
+.advantages-item:nth-child(odd) {
     background-color: #83b3d333;
 }
 
-.title-card {
+.advantages-item:first-child,
+.advantages-item:last-child {
+    background-color: #82b3d3;
+    color: #fff;
+}
+
+.advantages-item:first-child .advantages-title::after,
+.advantages-item:last-child .advantages-title::after {
+    background: #ffffff4d;
+}
+
+.advantages {
+    padding-top: 1px;
+}
+
+.advantages-title {
+    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
+    letter-spacing: 0;
+    position: relative;
     text-transform: uppercase;
-    color: #000000;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    padding-bottom: 31px;
 }
 
-.advice-text {
-    width: 230px;
-    margin: 0 auto;
+.advantages-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    height: 2px;
+    width: 60px;
+    background: #0000004d;
+    margin-top: 31px;
+}
 
+.advice-burger::before {
+    content: "";
+    display: block;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../images/burger.svg");
+}
+
+.advice-gift::before {
+    content: "";
+    display: block;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../images/gift.svg");
+}
+
+.advantages-description {
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    margin-top: 31px;
+}
+
+.advisory-description {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    gap: 20px;
+}
+
+.description-paragraph {
+    margin: 0;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.advice-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.advice-item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.advice-item:nth-child(odd) {
+    background-color: #83b3d31f;
+}
+
+.advice-item {
+    width: 400px;
+    padding: 81px 85px;
+    box-sizing: border-box;
     gap: 30px;
 }
 
-.advantages-logo-home {
-    background-image: url("../images/home.svg");
-    width: 75px;
+.advice-home::before {
+    content: "";
+    display: block;
     height: 72px;
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin: auto;
-}
-
-.advantages-logo-burger {
-    background-image: url("../images/burger.svg");
-    width: 74px;
-    height: 70px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: auto;
-}
-
-.advantages-logo-gift {
-    background-image: url("../images/gift.svg");
-    width: 64px;
-    height: 76px;
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: auto;
-}
-
-.advantages-logo-card {
-    margin: 0 auto;
+    background-size: contain;
+    background-image: url("../images/home.svg");
 }
 
 .advice-title {
-    margin: 0;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0 auto;
 }
 
 .advice-description {
-    margin: 0;
-}
-
-.description-card {
     font-size: 18px;
+    font-weight: 400;
     line-height: 21px;
     color: #333333;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+}
+
+.description-mailing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.description-mailing > .description-button-all {
+    margin-top: 34px;
+}
+
+.subscription {
+    background-image: url("../images/subscribe.jpg");
+    background-color: #83b3d333;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    gap: 20px;
+    padding: 96px 20px 104px 20px;
 }
 
 .color-white {
     color: #ffffff;
-}
-
-.description-button-all {
-    width: 376px;
-    font-size: 20px;
-    line-height: 36px;
 }
 
 .newsletter-button {
@@ -468,33 +505,13 @@ body {
     color: #333333;
 }
 
-.description-image {
-    color: #333333;
-    background-color: #967768;
-    background-image: url("../images/subscribe.jpg");
-    background-repeat: no-repeat;
-
-    background-size: cover;
-    min-height: 415px;
-}
-
 .description-title-white,
 .description-paragraph-white {
     color: #ffffff;
 }
 
-.subscription {
-    margin-top: 96px;
-    margin-bottom: 34px;
-}
-
-.description-title-white {
-    padding-top: 96px;
-    margin-bottom: 19px;
-}
-
 .newsletter {
-    margin-top: 53px;
+    margin-top: 34px;
 
     display: flex;
     justify-content: center;
@@ -522,19 +539,6 @@ body {
     border-bottom-right-radius: 4px;
 }
 
-.curious-description {
-    margin: 97px 0 96px 0;
-}
-
-.curious-description-title {
-    margin-bottom: 20px;
-}
-
-.curious-description-paragraph {
-    margin-top: 17px;
-    margin-bottom: 53px;
-}
-
 .description-button-all {
     width: 376px;
     height: 52px;
@@ -544,6 +548,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    font-size: 20px;
+    line-height: 36px;
 }
 
 .footer {
@@ -553,6 +560,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 36px;
 }
 
 .footer-contacts-phone {
@@ -562,6 +570,7 @@ body {
     font-style: normal;
     margin-left: 14px;
     margin-bottom: 30px;
+    text-decoration: none;
 }
 
 .footer-contacts-phone:hover {
@@ -579,6 +588,7 @@ body {
     align-items: center;
     gap: 26px;
     margin-left: 43px;
+    list-style-type: none;
 }
 
 .about-text {

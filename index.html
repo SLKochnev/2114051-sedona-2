@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="styles/styles.css" />
     </head>
     <body>
+      <div class="prime-container">
         <header class="prime-header">
             <a class="logo-link" href="index.html">
                 <img class="logo-img" width="140" height="70" src="images/logo.svg" alt="Логотип сайта Седона." />
@@ -50,15 +51,14 @@
             </nav>
         </header>
 
-        <main class="main-index main-container">
+        <main class="main-index">
             <section class="welcome-page">
                 <h1 class="visually-hidden">СЕДОНА</h1>
                 <img src="images/welcome.svg" alt="Логотип 'Седона'." class="welcome-page-logo" width="458" height="352" />
-                <img src="images/divider.png" alt="Логотип 'Седона'." width="100%" height="57" class="welcome-page-logo-decor" />
             </section>
 
             <section class="advantages">
-                <div class="description description-main-index">
+                <div class="description">
                     <h2 class="description-title">
                         Седона — небольшой городок в Аризоне, <br />
                         заслуживающий большего!
@@ -67,69 +67,75 @@
                 </div>
 
                 <h2 class="visually-hidden">Преимущества</h2>
-                <div class="advantages">
-                    <ul class="advantages-list marker-delete">
-                        <li class="advantages-item item-card blue-card">
-                            <div class="advantages-text">
-                                <h3 class="advantages-title title-card color-white">
-                                    Настоящий<br />
-                                    городок
-                                </h3>
-                                <div class="advantages-logo-decor advantages-logo-decor-white"></div>
-                                <p class="advantages-description description-card color-white">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-                            </div>
-                        </li>
-                        <li class="advantages-logo-building"></li>
 
-                        <li class="advantages-item item-card blue-gray-card">
-                            <div class="advantages-text">
-                                <h3 class="advantages-title title-card">
-                                    Небольшая<br />
-                                    площадь
-                                </h3>
-                                <div class="advantages-logo-decor advantages-logo-decor-gray"></div>
-                                <p class="advantages-description description-card">Все достопримечательности находятся очень близко</p>
-                            </div>
-                        </li>
-                        <li class="advantages-item item-card gray-card">
-                            <div class="advantages-text">
-                                <h3 class="advantages-title title-card">
-                                    Красивая<br />
-                                    дорога
-                                </h3>
-                                <div class="advantages-logo-decor advantages-logo-decor-gray"></div>
-                                <p class="advantages-description description-card">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-                            </div>
-                        </li>
-                        <li class="advantages-item item-card blue-gray-card">
-                            <div class="advantages-text">
-                                <h3 class="advantages-title title-card">
-                                    Мало<br />
-                                    туристов
-                                </h3>
-                                <div class="advantages-logo-decor advantages-logo-decor-gray"></div>
-                                <p class="advantages-description description-card">Большинство едет в Гранд Каньон и толпится там</p>
-                            </div>
-                        </li>
-
-                        <li class="advantages-item advantages-logo-bridge"></li>
-                        <li class="item-card blue-card">
-                            <div class="advantages-text">
-                                <h3 class="advantages-title title-card color-white">
-                                    Там есть <br />
-                                    мост дьявола
-                                </h3>
-                                <div class="advantages-logo-decor advantages-logo-decor-white"></div>
-                                <p class="advantages-description description-card color-white">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="advantages-list">
+                    <li class="advantages-item true-city">
+                        <div class="advantages-content">
+                            <h3 class="advantages-title">Настоящий городок</h3>
+                            <p class="advantages-description">
+                                Седона — не аттракцион для<br />
+                                туристов, там течёт своя<br />
+                                жизнь
+                            </p>
+                        </div>
+                        <img src="images/residential_building.jpg" width="800" height="385" alt="Здание с Американским флагом" />
+                    </li>
+                    <li class="advantages-item">
+                        <div class="advantages-content">
+                            <h3 class="advantages-title">
+                                Небольшая<br />
+                                площадь
+                            </h3>
+                            <p class="advantages-description">
+                                Все достопримечательности<br />
+                                находятся очень близко
+                            </p>
+                        </div>
+                    </li>
+                    <li class="advantages-item">
+                        <div class="advantages-content">
+                            <h3 class="advantages-title">
+                                Красивая<br />
+                                дорога
+                            </h3>
+                            <p class="advantages-description">
+                                Ехать в Седону из Лас-Вегаса<br />
+                                совсем не скучно!
+                            </p>
+                        </div>
+                    </li>
+                    <li class="advantages-item">
+                        <div class="advantages-content">
+                            <h3 class="advantages-title">
+                                Мало<br />
+                                туристов
+                            </h3>
+                            <p class="advantages-description">
+                                Большинство едет в Гранд<br />
+                                Каньон и толпится там
+                            </p>
+                        </div>
+                    </li>
+                    <li class="advantages-item bridge">
+                        <img src="images/devils_bridge.jpg" width="800" height="385" alt="Скалы" />
+                        <div class="advantages-content">
+                            <h3 class="advantages-title">
+                                Там есть<br />
+                                мост дьявола
+                            </h3>
+                            <p class="advantages-description">
+                                Да, по нему можно пройти!<br />
+                                Если вы осмелитесь,<br />
+                                разумеется
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </section>
 
             <section class="advice">
-                <div class="description advice-description">
-                    <h2 class="description-title advice-description-title">
+                <div class="description advisory-description">
+                    <h2 class="description-title advisory-description-title">
                         Приезжайте в Седону отдохнуть<br />
                         в комфорте и уюте!
                     </h2>
@@ -137,45 +143,36 @@
                 </div>
 
                 <h2 class="visually-hidden">советы</h2>
-                <ul class="advice-list list-card marker-delete">
-                    <li class="advice-item item-card blue-gray-card">
-                        <div class="advice-text">
-                            <div class="advantages-logo-home advantages-logo-card"></div>
-                            <h3 class="advice-title title-card">Жильё</h3>
-                            <p class="advice-description description-card">
-                                Рекомендуем пожить <br />
-                                в настоящем мотеле, <br />
-                                всё как в кино!
-                            </p>
-                        </div>
+                <ul class="advice-list">
+                    <li class="advice-item advice-home">
+                        <h3 class="advice-title">Жильё</h3>
+                        <p class="advice-description">
+                            Рекомендуем пожить <br />
+                            в настоящем мотеле, <br />
+                            всё как в кино!
+                        </p>
                     </li>
-                    <li class="advice-item item-card">
-                        <div class="advice-text">
-                            <div class="advantages-logo-burger advantages-logo-card"></div>
-                            <h3 class="advice-title title-card">Еда</h3>
-                            <p class="advice-description description-card">
-                                Всегда заказывайте <br />
-                                топовый фирменный бургер, <br />
-                                вы не разочаруетесь!
-                            </p>
-                        </div>
+                    <li class="advice-item advice-burger">
+                        <h3 class="advice-title">Еда</h3>
+                        <p class="advice-description">
+                            Всегда заказывайте <br />
+                            топовый фирменный бургер, <br />
+                            вы не разочаруетесь!
+                        </p>
                     </li>
-                    <li class="advice-item item-card blue-gray-card">
-                        <div class="advice-text">
-                            <div class="advantages-logo-gift advantages-logo-card"></div>
-                            <h3 class="advice-title title-card">Сувениры</h3>
-                            <p class="advice-description description-card">
-                                Не только китайского,<br />
-                                но и настоящего местного<br />
-                                производства!
-                            </p>
-                        </div>
+                    <li class="advice-item advice-gift">
+                        <h3 class="advice-title">Сувениры</h3>
+                        <p class="advice-description">
+                            Не только китайского,<br />
+                            но и настоящего местного<br />
+                            производства!
+                        </p>
                     </li>
                 </ul>
 
-                <div class="description curious-description">
-                    <h2 class="description-title curious-description-title">Заинтересовались?</h2>
-                    <p class="description-paragraph curious-description-paragraph">
+                <div class="description description-mailing">
+                    <h2 class="description-title">Заинтересовались?</h2>
+                    <p class="description-paragraph">
                         Укажите предполагаемые даты поездки, <br />
                         и мы покажем вам лучшие предложения гостиниц в Седоне
                     </p>
@@ -183,7 +180,7 @@
                 </div>
             </section>
 
-            <section class="subscription description description-image">
+            <section class="subscription description">
                 <h2 class="description-title description-title-white">Подпишитесь на рассылку</h2>
                 <p class="description-paragraph description-paragraph-white">
                     Только полезная информация и никакого спама,<br />
@@ -255,5 +252,6 @@
                 </svg>
             </a>
         </footer>
+      </div>
     </body>
 </html>
