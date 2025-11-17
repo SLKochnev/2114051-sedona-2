@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_32x32.png">
     </head>
     <body>
-      <div class="prime-container">
+      <div data-test="header" class="prime-container">
         <header class="prime-header">
             <a class="logo-link" href="index.html">
                 <img class="logo-img" width="140" height="70" src="images/logo.svg" alt="Логотип сайта Седона." />
@@ -53,7 +53,7 @@
             </nav>
         </header>
 
-
+        <main data-test="main" class="main">
         <section class="filter">
         <header class="catalog-header-filter">
           <h1 class="catalog-header-title">Гостиницы Седоны</h1>
@@ -136,7 +136,7 @@
         </form>
       </section>
 
-            <section class="catalog">
+            <section data-test="catalog" class="catalog">
                 <nav class="catalog-navigation">
                     <h2 class="catalog-navigation-title">Найдено гостиниц: 38</h2>
                     <select class="catalog-navigation-select" aria-label="Сортировка">
@@ -306,7 +306,7 @@
                 </ul>
             </section>
 
-            <section class=" description description-catalog">
+            <section data-test="subscribe" class=" description description-catalog">
                 <h2 class="subscription-title description-title description-title-catalog">Подпишитесь на рассылку</h2>
                 <p class="subscription-paragraph description-paragraph">
                     Только полезная информация и никакого спама,<br />
@@ -320,7 +320,7 @@
             </section>
         </main>
 
-        <footer class="footer footer-catalog">
+        <footer data-test="footer" class="footer footer-catalog">
             <div class="footer-social">
                 <ul class="footer-social-list marker-delete">
                     <li class="footer-social-item">
