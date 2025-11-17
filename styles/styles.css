@@ -1191,7 +1191,8 @@ body {
 }
 
 
-.price-group-button-blue {
+.price-group-button-blue,
+.button-modal {
     background-color: #82b3d3;
 }
 
@@ -1406,4 +1407,457 @@ body {
 
 .about-text:active path {
     fill: #7561574d;
+}
+
+
+
+
+
+
+
+
+
+
+.modal-overlay{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #F2F2F2CC;
+  visibility: hidden;
+}
+
+.modal-overlay:target, .modal-overlay-opened {
+  visibility: visible;
+}
+
+.modal{
+  position: relative;
+  background-color: #FFFFFF;
+  box-shadow: 0 25px 50px 0 #00000026;
+  padding: 64px 70px;
+  border-radius: 30px;
+  min-width: 717px;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.modal-title{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  padding-right: 40px;
+}
+
+.close-modal{
+  display: block;
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #F2F2F2;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-modal:before, .close-modal:after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: #000000;
+  left: 50%;
+  top: 50%;
+}
+
+.close-modal:before{
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.close-modal:after{
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.close-modal:hover, .close-modal:active{
+  background-color: #E5E5E5;
+}
+
+.close-modal:active::before, .close-modal:active::after{
+  opacity: 0.3;
+}
+
+.modal-control-input{
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  align-items: center;
+  border: none;
+  margin: 0;
+  padding: 0;
+  grid-column: span 2;
+}
+
+.form-modal{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 23px;
+  column-gap: 88px;
+  margin-top: 64px;
+}
+
+.form-modal-label{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+.form-modal-input-info{
+  grid-column-start: 2;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  vertical-align: middle;
+  margin-top: 4px;
+}
+
+.form-modal-input-info-error{
+  color: #FF5757;
+}
+
+.form-modal-input-date::placeholder{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: middle;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.form-modal-input-date{
+  font-family: "PT Sans", sans-serif;
+  display: flex;
+  height: 48px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 60px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: middle;
+  background-image: url("../images/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center right 20px;
+}
+
+.form-modal-input-date:hover{
+  background-color: #E5E5E5;
+}
+
+.form-modal-human-count{
+  display: flex;
+}
+
+.form-modal-input-counter{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 40px 31px 40px;
+  background-color: #F2F2F2;
+  height: 48px;
+  border-radius: 4px;
+  align-items: center;
+  justify-items: center;
+}
+
+.form-modal-input-counter > input{
+  font-family: "PT Sans", sans-serif;
+  min-width: 31px;
+  width: 31px;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  border: none;
+}
+
+.button-count{
+  border: none;
+  display: flex;
+  position: relative;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.button-count-minus:after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #7561574D;
+}
+
+.button-count-minus:after {
+  transform: translateX(-50%);
+}
+
+.button-count-minus:hover:after{
+  background: #000000;
+}
+
+.button-count-minus:active:after{
+  background: #7561574D;
+}
+
+.button-count-plus:before, .button-count-plus:after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #7561574D;
+}
+
+.button-count-plus:before {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.button-count-plus:after {
+  transform: translateX(-50%);
+}
+
+.button-count-plus:hover:after, .button-count-plus:hover:before{
+  background: #000000;
+}
+
+.button-count-plus:active:after, .button-count-plus:active:before{
+  background: #7561574D;
+}
+
+.form-modal > button[type="submit"]{
+  margin-top: 24px;
+  grid-column: span 2;
+  border-radius: 10px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+}
+
+.modal-control-counter{
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-child-info{
+  display: flex;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.modal-child-info-wrapper{
+  position: relative;
+  display: flex;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.modal-child-info:hover + .modal-child-info-data{
+  display: block;
+}
+
+.modal-child-info:focus + .modal-child-info-data{
+  display: block;
+}
+
+.modal-child-info-data{
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: middle;
+  width: 256px;
+  background: #333333;
+  color: #ffffff;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  box-sizing: border-box;
+  display: none;
+}
+
+.modal-child-info-data:after{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  display: block;
+  background: #333333;
+  width: 10px;
+  height: 10px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.filter-amount-range{
+  display: flex;
+  height: 48px;
+  gap: 2px;
+  border-radius: 4px;
+  overflow: hidden;
+
+}
+
+.filter-amount-range-wrapper{
+  position: relative;
+  background-color: #F2F2F2;
+  width: 143px;
+}
+
+.filter-amount-range-wrapper:hover{
+  background-color: #E5E5E5;
+}
+
+.filter-amount-range-wrapper > span{
+  position: absolute;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: right;
+  vertical-align: middle;
+  opacity: 0.3;
+  color: black;
+  right: 20px;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+.input-amount{
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: middle;
+  border: none;
+  background-color: transparent;
+  padding: 0 40px 0 20px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-amount::-webkit-outer-spin-button,
+.input-amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-amount[type=number] {
+  -moz-appearance: textfield;
+}
+
+.control{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.control:hover{
+  opacity: 0.6;
+}
+
+.control:active{
+  opacity: 0.3;
+}
+
+.checkbox-mark{
+  display: block;
+  position: relative;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .checkbox-mark:after{
+  content: "";
+  display: block;
+  width: 10px;
+  height: 6px;
+  position: absolute;
+  border-left: 3px solid #3F5E72;
+  border-bottom: 3px solid #3F5E72;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%) rotate(-45deg);
+}
+
+.radio-mark{
+  display: block;
+  position: relative;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  margin-left: 1px;
+}
+
+.control-input[type="radio"]:checked + .radio-mark:after{
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background:  #3F5E72;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.control-text{
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
 }
