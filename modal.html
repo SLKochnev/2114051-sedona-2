@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8" />
-        <title>HTML Academy: Седона</title>
-        <link rel="stylesheet" href="styles/styles.css" />
-        <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_32x32.png">
-    </head>
-    <body>
-      <div class="prime-container">
-        <header  data-test="header" class="prime-header">
+<head>
+  <meta charset="utf-8">
+  <title>Гостиницы в городе "Седона"</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_32x32.png">
+</head>
+<body>
+
+<div class="prime-container">
+        <header class="prime-header">
             <a class="logo-link" href="index.html">
                 <img class="logo-img" width="140" height="70" src="images/logo.svg" alt="Логотип сайта Седона." />
             </a>
@@ -53,13 +54,13 @@
             </nav>
         </header>
 
-        <main data-test="main" class="main-index">
-            <section data-test="hero" class="welcome-page">
+        <main class="main-index">
+            <section class="welcome-page">
                 <h1 class="visually-hidden">СЕДОНА</h1>
                 <img src="images/welcome.svg" alt="Логотип 'Седона'." class="welcome-page-logo" width="458" height="352" />
             </section>
 
-            <section data-test="advantages" class="advantages">
+            <section class="advantages">
                 <div class="description">
                     <h2 class="description-title">
                         Седона — небольшой городок в Аризоне, <br />
@@ -135,7 +136,7 @@
                 </ul>
             </section>
 
-            <section data-test="service" class="advice">
+            <section class="advice">
                 <div class="description advisory-description">
                     <h2 class="description-title advisory-description-title">
                         Приезжайте в Седону отдохнуть<br />
@@ -172,17 +173,17 @@
                     </li>
                 </ul>
 
-                <div data-test="search" class="description description-mailing">
+                <div class="description description-mailing">
                     <h2 class="description-title">Заинтересовались?</h2>
                     <p class="description-paragraph">
                         Укажите предполагаемые даты поездки, <br />
                         и мы покажем вам лучшие предложения гостиниц в Седоне
                     </p>
-                    <a href="modal.html" class="button description-button-all button-brown">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+                    <a href="#" class="button description-button-all button-brown">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
                 </div>
             </section>
 
-            <section data-test="subscribe" class="subscription description">
+            <section class="subscription description">
                 <h2 class="description-title description-title-white">Подпишитесь на рассылку</h2>
                 <p class="description-paragraph description-paragraph-white">
                     Только полезная информация и никакого спама,<br />
@@ -196,7 +197,7 @@
             </section>
         </main>
 
-        <footer data-test="footer" class="footer">
+        <footer class="footer">
             <div class="footer-social">
                 <ul class="footer-social-list marker-delete">
                     <li class="footer-social-item">
@@ -254,71 +255,68 @@
                 </svg>
             </a>
         </footer>
-      </div>
 
-
-
-      <div data-test="modal" class="modal-overlay" id="modal">
-      <div data-test="modal" class="modal">
-        <button type="button" class="close-modal">
-          <span class="visually-hidden">Закрыть модальное окно</span>
-        </button>
-        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-        <form class="form-modal" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="modal-control-input">
-            <label class="form-modal-label" for="date-start">Дата Заезда:</label>
-            <input required class="form-modal-input-date" id="date-start" name="date-start" value="27 апреля 2020" placeholder="Укажите дату">
-            <span class="form-modal-input-info form-modal-input-info-error">Мы не можем отправить вас в прошлое.</span>
-          </fieldset>
-          <fieldset class="modal-control-input">
-            <label class="form-modal-label" for="date-end">Дата Выезда:</label>
-            <input required class="form-modal-input-date" id="date-end" name="date-end" value="1 сентября 2023" placeholder="Укажите дату">
-            <span class="form-modal-input-info">На эти даты есть свободные номера. Пока есть.</span>
-          </fieldset>
-          <fieldset class="modal-control-counter">
-            <label class="form-modal-label" for="adults-count">Взрослые:</label>
-            <div class="form-modal-input-counter">
-              <button type="button" class="button-count button-count-minus">
-                <span class="visually-hidden">Уменьшить количество взрослых на 1</span>
-              </button>
-              <input id="adults-count" name="adults-count" value="2">
-              <button type="button" class="button-count button-count-plus">
-                <span class="visually-hidden">Увеличить количество взрослых на 1</span>
-              </button>
-            </div>
-          </fieldset>
-          <fieldset class="modal-control-counter">
-            <label class="form-modal-label " for="child-count">
-              Дети:
-            </label>
-            <div class="modal-child-info-wrapper">
-              <button type="button" class="modal-child-info">
-                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
-                </svg>
-                <span class="visually-hidden">
+<!-- Модалка -->
+<div class="modal-overlay modal-overlay-opened" id="modal">
+  <div data-test="modal" class="modal">
+    <button type="button" class="close-modal">
+      <span class="visually-hidden">Закрыть модальное окно</span>
+    </button>
+    <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+    <form class="form-modal" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="modal-control-input">
+        <label class="form-modal-label" for="date-start">Дата Заезда:</label>
+        <input required class="form-modal-input-date" id="date-start" name="date-start" value="27 апреля 2020" placeholder="Укажите дату">
+        <span class="form-modal-input-info form-modal-input-info-error">Мы не можем отправить вас в прошлое.</span>
+      </fieldset>
+      <fieldset class="modal-control-input">
+        <label class="form-modal-label" for="date-end">Дата Выезда:</label>
+        <input required class="form-modal-input-date" id="date-end" name="date-end" value="1 сентября 2023" placeholder="Укажите дату">
+        <span class="form-modal-input-info">На эти даты есть свободные номера. Пока есть.</span>
+      </fieldset>
+      <fieldset class="modal-control-counter">
+        <label class="form-modal-label" for="adults-count">Взрослые:</label>
+        <div class="form-modal-input-counter">
+          <button type="button" class="button-count button-count-minus">
+            <span class="visually-hidden">Уменьшить количество взрослых на 1</span>
+          </button>
+          <input id="adults-count" name="adults-count" value="2">
+          <button type="button" class="button-count button-count-plus">
+            <span class="visually-hidden">Увеличить количество взрослых на 1</span>
+          </button>
+        </div>
+      </fieldset>
+      <fieldset class="modal-control-counter">
+        <label class="form-modal-label " for="child-count">
+          Дети:
+        </label>
+        <div class="modal-child-info-wrapper">
+          <button type="button" class="modal-child-info">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+            </svg>
+            <span class="visually-hidden">
               Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
             </span>
-              </button>
-              <div class="modal-child-info-data">
-                Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
-              </div>
-            </div>
-            <div class="form-modal-input-counter">
-              <button type="button" class="button-count button-count-minus">
-                <span class="visually-hidden">Уменьшить количество детей на 1</span>
-              </button>
-              <input id="child-count" name="child-count" value="2">
-              <button type="button" class="button-count button-count-plus">
-                <span class="visually-hidden">Увеличить количество детей на 1</span>
-              </button>
-            </div>
-          </fieldset>
-          <button type="submit" class="button button-blue button-modal">Найти</button>
-        </form>
-      </div>
-    </div>
-
-    </body>
+          </button>
+          <div class="modal-child-info-data">
+            Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+          </div>
+        </div>
+        <div class="form-modal-input-counter">
+          <button type="button" class="button-count button-count-minus">
+            <span class="visually-hidden">Уменьшить количество детей на 1</span>
+          </button>
+          <input id="child-count" name="child-count" value="2">
+          <button type="button" class="button-count button-count-plus">
+            <span class="visually-hidden">Увеличить количество детей на 1</span>
+          </button>
+        </div>
+      </fieldset>
+      <button type="submit" class="button button-blue button-modal">Найти</button>
+    </form>
+  </div>
+</div>
+</body>
 </html>
